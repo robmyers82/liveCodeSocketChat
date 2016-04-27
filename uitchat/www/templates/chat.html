@@ -1,0 +1,20 @@
+<ion-view view-title="UIT Chat">
+  <ion-header-bar class="bar-stable">
+    <h1 class="title">UIT Chat</h1>
+  </ion-header-bar>
+  <ion-content>
+    <ul id="messages">
+      <li ng-repeat="message in messageList">{{message}}</li>
+    </ul>
+  </ion-content>
+  <ion-footer-bar class="bar-clear footer">
+    <div class="row">
+      <div class="col col-75">
+        <input type="text" ng-model="newMessage.message" placeholder="Reply" />
+      </div>
+      <div class="col col-25">
+        <button class="button button-block button-assertive" ng-click="postReply()">Send</button>
+      </div>
+    </div>
+  </ion-footer-bar>
+</ion-view>
